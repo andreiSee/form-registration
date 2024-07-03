@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --alert-transition-duration: 0.3s;
+    --gap: 16px;
+    --alert-height: 0;
+    --color-border: rgb(229 229 229);
+    --color-valid: rgb(22 163 74);
+    --color-error: rgb(220 28 28);
+    --color-outline: rgb(107 114 128);
+  }
+
+  body {
+    @apply overscroll-none;
+  }
+
+  a:focus-visible,
+  input:focus-visible {
+    @apply outline-none;
+  }
+}
