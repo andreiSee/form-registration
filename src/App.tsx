@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Focus from './components/Focus';
 import { H1 } from './components/HtmlTags';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -23,7 +24,10 @@ const App = ({ children }: { children: React.ReactNode }) => {
             </Link>
           </Focus>
         </header>
-        <main className="self-center mt-4">{children}</main>
+        <main className="self-center mt-4">
+          {children}
+          <ScrollToTop />
+        </main>
         <footer className="self-center pt-14 pb-14">
           <div
             className="flex
