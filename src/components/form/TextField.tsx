@@ -36,6 +36,7 @@ const TextField = ({
         id={fieldName}
         {...register}
         aria-invalid={error ? 'true' : 'false'}
+        aria-required="true"
         autoComplete="on"
         minLength={2}
         maxLength={255}

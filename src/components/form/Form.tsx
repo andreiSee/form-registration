@@ -106,7 +106,7 @@ const Form = () => {
         >
           <input type="hidden" name="csrf-token" value="832fwe63jd87we3esr7d" />
           <FormFieldGroup>
-            <Label htmlFor="firstname">Vorname: *</Label>
+            <Label htmlFor="firstname">Vorname (Pflichtfeld)</Label>
             <Focus>
               <TextField
                 fieldName="firstname"
@@ -123,7 +123,7 @@ const Form = () => {
             errorMessage={errors.firstname?.message}
           />
           <FormFieldGroup>
-            <Label htmlFor="lastname">Nachname: *</Label>
+            <Label htmlFor="lastname">Nachname (Pflichtfeld)</Label>
             <Focus>
               <TextField
                 fieldName="lastname"
@@ -140,7 +140,7 @@ const Form = () => {
             errorMessage={errors.lastname?.message}
           />
           <FormFieldGroup>
-            <Label htmlFor="email">E-Mail: * </Label>
+            <Label htmlFor="email">E-Mail (Pflichtfeld) </Label>
             <Focus>
               <EmailField
                 fieldName="email"
@@ -157,7 +157,7 @@ const Form = () => {
             errorMessage={errors.email?.message}
           />
           <FormFieldGroup>
-            <Label htmlFor="password">Passwort: * </Label>
+            <Label htmlFor="password">Passwort (Pflichtfeld) </Label>
             <Focus>
               <PasswordField
                 fieldName="password"
@@ -184,9 +184,6 @@ const Form = () => {
               ))}
             </p>
           </div>
-          <p role="contentinfo" className="text-sm text-right">
-            * Notwendige Daten
-          </p>
           <Focus>
             <SubmitButton formSubmit={formSubmit} isValid={isValid} />
           </Focus>

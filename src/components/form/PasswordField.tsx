@@ -42,6 +42,7 @@ const PasswordField = ({
         id={fieldName}
         {...register}
         aria-invalid={error ? 'true' : 'false'}
+        aria-required="true"
         autoComplete="off"
         data-testid={fieldName}
         maxLength={255}
