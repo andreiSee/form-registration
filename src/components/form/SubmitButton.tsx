@@ -34,12 +34,9 @@ const SubmitButton = ({ formSubmit, isValid }: Props) => {
                 p-2
                 transition-all
                 duration-500
-                hover:[&:not(:disabled)]:bg-gray-200 
-                hover:[&:not(:disabled)]:border-gray-600 
-                disabled:bg-gray-200 
-                disabled:text-gray-400"
+                hover:bg-gray-200 
+                hover:border-gray-600"
         type="submit"
-        disabled={!isValid || formSubmit}
       >
         Absenden
         {!isValid && (
