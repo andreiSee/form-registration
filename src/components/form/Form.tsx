@@ -117,6 +117,7 @@ const Form = () => {
             </Focus>
           </FormFieldGroup>
           <FormFieldAlert
+            id="firstname-error"
             ref={firstnameAlert}
             isTouched={touchedFields.firstname}
             error={errors.firstname}
@@ -134,6 +135,7 @@ const Form = () => {
             </Focus>
           </FormFieldGroup>
           <FormFieldAlert
+            id="lastname-error"
             ref={lastnameAlert}
             isTouched={touchedFields.lastname}
             error={errors.lastname}
@@ -151,6 +153,7 @@ const Form = () => {
             </Focus>
           </FormFieldGroup>
           <FormFieldAlert
+            id="email-error"
             ref={emailAlert}
             isTouched={touchedFields.email}
             error={errors.email}
@@ -174,6 +177,7 @@ const Form = () => {
                   ? 'text-[var(--color-error)]'
                   : ''
               }
+              id="password-hint"
               data-testid="password-hint"
             >
               {passwordRules.map((rule, index) => (
@@ -184,8 +188,13 @@ const Form = () => {
               ))}
             </p>
           </div>
+
           <Focus>
-            <SubmitButton formSubmit={formSubmit} isValid={isValid} />
+            <SubmitButton
+              formSubmit={formSubmit}
+              isValid={isValid}
+              touchedFieldsCount={Object.keys(touchedFields).length}
+            />
           </Focus>
         </form>
       </section>

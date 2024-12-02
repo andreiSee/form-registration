@@ -6,21 +6,21 @@ const schema = z.object({
     .string()
     .min(
       config.minFirstname,
-      `Der Vorname muss mind. ${config.minFirstname} Zeichen lang sein`
+      `Der Vorname muss mindestens ${config.minFirstname} Zeichen lang sein`
     )
     .max(
       config.maxFirstname,
-      `Der Vorname darf max. ${config.maxFirstname} Zeichen lang sein`
+      `Der Vorname darf maximal ${config.maxFirstname} Zeichen lang sein`
     ),
   lastname: z
     .string()
     .min(
       config.minLastname,
-      `Der Nachname muss mind. ${config.minLastname} Zeichen lang sein`
+      `Der Nachname muss mindestens ${config.minLastname} Zeichen lang sein`
     )
     .max(
       config.maxLastname,
-      `Der Nachname darf max. ${config.maxLastname} Zeichen lang sein`
+      `Der Nachname darf maximal ${config.maxLastname} Zeichen lang sein`
     ),
   email: z
     .string()

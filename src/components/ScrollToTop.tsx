@@ -41,6 +41,7 @@ const ScrollToTop = () => {
   return (
     <button
       ref={buttonRef}
+      type="button"
       title="scroll to top"
       onClick={scroll}
       className="

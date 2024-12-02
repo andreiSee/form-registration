@@ -1,14 +1,16 @@
 import React from 'react';
 import { FieldError } from 'react-hook-form';
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 type PropTypes = {
+  id: string;
   isTouched: boolean | undefined;
   error: FieldError | undefined;
   errorMessage: string | undefined;
 };
 
 const FormFieldAlert = React.forwardRef<HTMLParagraphElement, PropTypes>(
-  ({ isTouched, error, errorMessage }, ref) => {
+  ({ id, isTouched, error, errorMessage }, ref) => {
     return (
       <div
         className="overflow-hidden
@@ -21,17 +23,22 @@ const FormFieldAlert = React.forwardRef<HTMLParagraphElement, PropTypes>(
             empty:transition-[height]"
       >
         {error && isTouched && (
-          <p
-            ref={ref}
-            className="text-[var(--color-error)]
+          <>
+            <p
+              id={id}
+              ref={ref}
+              className="text-[var(--color-error)]
               absolute
+              flex
               bottom-0
               pt-2
               text-sm;"
-            role="alert"
-          >
-            {errorMessage}
-          </p>
+              role="alert"
+            >
+              <InformationCircleIcon className="size-6 mr-2" />
+              {errorMessage}
+            </p>
+          </>
         )}
       </div>
     );

@@ -42,10 +42,10 @@ const PasswordField = ({
         id={fieldName}
         {...register}
         aria-invalid={error ? 'true' : 'false'}
+        aria-labelledby="password password-hint"
         aria-required="true"
         autoComplete="off"
         data-testid={fieldName}
-        maxLength={255}
       />
       <div
         className={`${
@@ -68,12 +68,15 @@ const PasswordField = ({
           type="button"
           onClick={() => setShowPassword(!showPassword)}
           tabIndex={0}
+          role="checkbox"
+          aria-checked={showPassword ? true : false}
           className="rounded-sm
             focus-within:outline
             focus-within:outline-[var(--color-outline)]
             focus-within:outline-2
             focus-within:outline-offset-0"
         >
+          <span className="visually-hidden">Passwort anzeigen</span>
           {showPassword && <EyeSlashIcon className="size-6" />}
           {!showPassword && <EyeIcon className="size-6" />}
         </button>

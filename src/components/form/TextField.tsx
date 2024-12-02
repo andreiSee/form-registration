@@ -38,8 +38,7 @@ const TextField = ({
         aria-invalid={error ? 'true' : 'false'}
         aria-required="true"
         autoComplete="on"
-        minLength={2}
-        maxLength={255}
+        aria-describedby={error ? `${fieldName}-error` : undefined}
       />
       {currentFieldState(fieldName) === 'valid' && (
         <CheckMark fieldname={fieldName} />
