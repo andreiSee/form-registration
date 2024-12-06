@@ -25,6 +25,7 @@ const App = ({ children }: { children: React.ReactNode }) => {
               </Link>
             </Focus>
           </header>
+          <hr className="h-[1px] my-6 w-full bg-gray-800" />
           <main className="self-center mt-4">
             {children}
             <ScrollToTop />
@@ -62,7 +63,7 @@ const App = ({ children }: { children: React.ReactNode }) => {
                 </Link>
               </Focus>
             </div>
-            <div className="flex justify-center gap-6 pb-6 items-center">
+            <div className="flex justify-center gap-6 pb-6 items-center grayscale">
               <img
                 alt="erecht24 Agentur-Siegel"
                 src="/erecht24-agentur-siegel-dark-190x80.png"

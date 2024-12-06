@@ -68,6 +68,7 @@ const InfoBox = () => {
             hover:border-gray-400 
             transition-all 
             duration-200
+            grayscale
             outline-none"
           >
             <img
