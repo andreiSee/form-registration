@@ -16,7 +16,7 @@ import SubmitButton from './SubmitButton.tsx';
 
 const passwordRules = [
   '8 Zeichen (Mindestens)',
-  '1 Goßbuchstabe (Mindestens)',
+  '1 Großbuchstabe (Mindestens)',
   '1 Kleinbuchstabe (Mindestens)',
   '1 Sonderzeichen (Mindestens)',
   '1 Zahl (Mindestens)',

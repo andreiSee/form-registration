@@ -4,6 +4,7 @@ import { H2 } from '../HtmlTags.tsx';
 import Modal from '../Modal.tsx';
 
 const techStackList = [
+  { title: 'A11y', url: 'https://www.w3.org/TR/WCAG22/' },
   { title: 'React', url: 'https://react.dev/' },
   { title: 'TypeScript', url: 'https://www.typescriptlang.org/' },
   { title: 'React-Hook-Form', url: 'https://react-hook-form.com/' },
