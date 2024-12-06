@@ -14,8 +14,8 @@ const App = ({ children }: { children: React.ReactNode }) => {
           from-[0%]
           to-[100%]"
       ></div>
-      <div className="flex justify-center md:w-[600px] bg-white">
-        <div className="w-9/12">
+      <div className="flex justify-center md:w-[750px] bg-white">
+        <div className="w-10/12">
           <header className="flex self-center justify-center w-full mt-14">
             <Focus>
               <Link to={'/'}>
